@@ -1,0 +1,37 @@
+from odoo import models, fields
+
+##
+#Neišbaigtos temos dėl laiko stokos:
+#1) @api.depens
+#2) compute
+#3) Action'ai
+#4) Group'ų panaudojimas
+#5) Controller'iai
+#6) Report'ai 
+##
+
+class EfLibraryBook(models.Model):
+    _name = 'ef.library.book'
+    _description = 'Library Book'
+
+    name = fields.Char(string='Title', required=True)
+    short_description = fields.Char(string='Short description')
+    page_count = fields.Integer(string='Page count')
+    genre = fields.Char(string='Genre (can be more than one)')
+    borrowings_ids = fields.One2many('ef.library.book.borrowing', 'ref_book_id', string='Borrowings')
+
+class EfLibraryBookBorrowing(models.Model):
+    _name = 'ef.library.book.borrowing'
+    _description = 'Book Borrowing'
+
+    ref_book_id = fields.Many2one('ef.library.book', string='Book', required=True)
+    borrower_id = fields.Many2one('res.partner', string='Borrower', required=True)
+    borrow_date = fields.Date(string='Borrow Date', default=fields.Date.today(), required=True)
+    to_return_date = fields.Date(string='To return Date', required=True)
+    #Panaudota selection, tik ar ne geriau būtų kurti kaip atskirą esybę(lentelę) klasifikatoriams?
+    borrow_state = fields.Selection([
+        ('R', 'Reserved'),
+        ('B', 'Borrowed'),
+        ('RB', 'Returned back'),
+        ('C', 'Canceled'),
+        ], 'Borrowed books state', required=True)

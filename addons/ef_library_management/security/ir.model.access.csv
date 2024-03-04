@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ef_library_management_ef_library_management,ef_library_management.ef_library_management,model_ef_library_management_ef_library_management,base.group_user,1,1,1,1
+access_ef_library_book,access_ef_library_book,model_ef_library_book,base.group_user,1,1,1,1
+access_ef_library_book_borrowing,access_ef_library_book_borrowing,model_ef_library_book_borrowing,base.group_user,1,1,1,1
