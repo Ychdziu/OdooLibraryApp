@@ -24,7 +24,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/library_view.xml',
-        'views/library_book_borrowing_history_template.xml'
+        'views/library_book_borrowing_history_template.xml',
+        'data/scheduled_actions.xml'
     ],
     'installable': True,
     'application': True,

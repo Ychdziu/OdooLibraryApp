@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="action_check_return_dates" model="ir.cron">
+            <field name="name">Check Book Return Dates</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="True" name="doall"/>
+            <field name="model">ef.library.book.borrowing</field>
+            <field name="function">_check_return_dates</field>
+        </record>
+    </data>
+</odoo>
