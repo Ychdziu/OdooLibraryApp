@@ -1,0 +1,7 @@
+2024-03-04 22:19:00,566 25112 INFO ? odoo: Odoo version 13.0-20230601 
+2024-03-04 22:19:00,566 25112 INFO ? odoo: Using configuration file at C:\imagamis\side_projects\odoo\Odoo_13\server\odoo.conf 
+2024-03-04 22:19:00,566 25112 INFO ? odoo: addons paths: ['C:\\imagamis\\side_projects\\odoo\\Odoo_13\\server\\odoo\\addons', 'c:\\users\\user\\appdata\\local\\openerp s.a\\odoo\\addons\\13.0', 'c:\\imagamis\\side_projects\\odoo\\odoo_13\\server\\odoo\\addons'] 
+2024-03-04 22:19:00,566 25112 INFO ? odoo: database: odoo@localhost:5432 
+2024-03-04 22:19:01,408 25112 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\imagamis\side_projects\odoo\Odoo_13\thirdparty\wkhtmltopdf.exe 
+2024-03-04 22:19:01,979 25112 INFO ? odoo.service.server: Initiating shutdown 
+2024-03-04 22:19:01,979 25112 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
