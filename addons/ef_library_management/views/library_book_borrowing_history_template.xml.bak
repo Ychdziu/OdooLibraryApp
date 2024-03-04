@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="report_library_book_borrowing_history">
+            <t t-call="web.basic_layout">
+				<div class="page">
+					<t t-call="web.external_layout">
+						<t t-foreach="docs" t-as="doc">
+							<!-- Display fields from the model -->
+							<p><t t-esc="doc.book_id.name"/></p>
+							<p><t t-esc="doc.borrower_id.name"/></p>
+							<p><t t-esc="doc.borrow_date"/></p>
+							<p><t t-esc="doc.return_date"/></p>
+							<p><t t-esc="doc.is_returned"/></p>
+						</t>
+					</t>
+				</div>
+			</t>
+        </template>
+    </data>
+</odoo>

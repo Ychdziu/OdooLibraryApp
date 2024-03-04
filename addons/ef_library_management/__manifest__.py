@@ -22,8 +22,9 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        #'views/views.xml',
+        'security/ir.model.access.csv',
+        'views/library_view.xml',
+        'views/library_book_borrowing_history_template.xml'
     ],
     'installable': True,
     'application': True,
